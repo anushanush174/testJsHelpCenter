@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Help Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li>
+                <div class="sidebarElement">
+                    <div class="d-flex">
+                        <h4 class="menuItem">Оформление заказа</h4>
+                        <div class="arrow">
+                            <div class="d-none arrowRight" id="deliveryArrowRight">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 17.5L15 12L9.5 6.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-block arrowUP" id="deliveryArrowUP">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 14.5L12 9L6.5 14.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <ul onclick="stopProp(event)" class="submenu d-none" id="orderRegistration">
+                        <li class="active submenuItem"
+                            onclick="getSelectedField(this); getSelectedContent('max-wayToReceiveOrder', 'mini-wayToReceiveOrder')"
+                            id="wayToReceiveOrder">Какие есть способы получения заказа
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-wayToReceiveOrder">
+                            <h4>1. Доставка курьером</h4>
+                            <p> Доступна по Армении. Срок доставки и точную стоимость вы увидите при оформлении заказа.
+                                Примерную стоимость можно узнать в корзине.
+                                Курьерская доставка может менятся в зависимости от:
+                            </p>
+                            <div class="d-flex table">
+                                <div class="col bottom-none">
+                                    <div class="div-h">Расстояния</div>
+                                    <div class="div-d">Продавец указывает цену для разных локаций</div>
+                                </div>
+                                <div class="col bottom-none">
+                                    <div class="div-h">Габарита</div>
+                                    <div class="div-d">Для крупно габаритных и тяжелех товаров, продавец может менять
+                                        цену
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="div-h">Количества</div>
+                                    <div class="div-d">Доставка может быть беплатной, если заказ будет выше указанной
+                                        суммы (сумму задаетпродавец)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>2. Самовывоз из пункта выдачи</h4>
+                            <p> Более 4000 пунктов выдачи в Ереване и 14 000 пунктов выдачи по Армении.
+                                Найти удобный для вас пункт выдачи можно в окне пунктов Самовывоза.
+                            </p>
+
+                        </div>
+
+                        <li class="submenuItem"
+                            onclick="getSelectedField(this); getSelectedContent('max-changedDeliveryDate', 'mini-changedDeliveryDate')"
+                            id="changedDeliveryDate">В корзине изменилась дата доставки
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-changedDeliveryDate">
+                            <div class="unordered-list">
+                                <h4>Такое происходит, когда:</h4>
+                                <ul>
+                                    <li>у продавца смещается дата отгрузки товара,</li>
+                                    <li>вы изменили регион или адрес доставки.</li>
+                                </ul>
+                            </div>
+                            <p>Если вам подходит новая дата доставки товара, оформите заказ.</p>
+                        </div>
+
+                        <li class="submenuItem"
+                            onclick="getSelectedField(this); getSelectedContent('max-statusOfOrder', 'mini-statusOfOrder')"
+                            id="statusOfOrder">Как узнать статус заказа
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-statusOfOrder">
+                            <p>Узнать статус заказа можно в личном кабинете. Для этого перейдите в раздел «Заказы» и
+                                найдите нужный
+                                заказ. В карточке заказа вы увидите текущий статус.</p>
+                            <div class="unordered-list">
+                                <p>Что означают статусы:</p>
+                                <ul>
+                                    <li><span>Создан.</span> Вы создали заказ, и мы его приняли.</li>
+                                    <li><span>Отправлен продавцу.</span> Заказ отправлен продавцу и ожидает
+                                        подтверждения*.
+                                    </li>
+                                    <li><span>Подтвержден продавцом.</span> Продавец подтвердил заказ и готовит его к
+                                        отгрузке в
+                                        службу
+                                        доставки.
+                                    </li>
+                                    <li><span>Получен курьерской службой.</span> Заказ поступил в службу доставки, его
+                                        скоро
+                                        отправят.
+                                    </li>
+                                    <li><span>Поступил в пункт выдачи.</span> Поступил в пункт выдачи. Заказ поступил в
+                                        пункт
+                                        выдачи, и
+                                        вы можете его забрать.
+                                    </li>
+                                    <li><span>Передан курьеру.</span> Заказ у курьера, ожидайте доставку.</li>
+                                    <li><span>Получен.</span> Вы получили или забрали заказ.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="sidebarElement">
+                    <div class="d-flex">
+                        <h4 class="menuItem ">Оплата и документы</h4>
+                        <div class="arrow">
+                            <div class="d-block arrowRight">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 17.5L15 12L9.5 6.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-none arrowUP ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 14.5L12 9L6.5 14.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <ul onclick="stopProp(event)" class="submenu d-none" id="paymentAndDocs">
+                        <li class="submenuItem" id="paymentMethods"
+                            onclick="getSelectedField(this); getSelectedContent('max-paymentMethods', 'mini-paymentMethods')">
+                            Способы оплаты
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-paymentMethods">
+                            <h4>Оплата онлайн на сайте</h4>
+                            <div class="unordered-list">
+                                <p>Можно оплатить:</p>
+                                <ul>
+                                    <li>кредитной картой,</li>
+                                    <li>налиными</li>
+                                    <li>в рассрочку.</li>
+                                </ul>
+                            </div>
+                            <h4>Оплата при получении</h4>
+                            <div class="unordered-list">
+                                <p>В пункте выдачи можно оплатить:</p>
+                                <ul>
+                                    <li>кредитной картой,</li>
+                                    <li>наличными</li>
+                                </ul>
+                                <p class="m-top-10">При доставке курьером можно оплатить:</p>
+                                <ul>
+                                    <li>картой через терминал у курьера,</li>
+                                    <li>наличными.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <li class="submenuItem" id="payOrderOnline"
+                            onclick="getSelectedField(this); getSelectedContent('max-payOrderOnline', 'mini-payOrderOnline')">
+                            Как оплатить заказ онлайн
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-payOrderOnline">
+                            <h4>Банковской картой</h4>
+                            <div class="unordered-list">
+                                <ul>
+                                    <li>Выберите способ оплаты «Онлайн, банковской картой» при оформлении заказа.</li>
+                                    <li>Введите данные карты или используйте карту, которую вы сохранили.</li>
+                                    <li>Нажмите на кнопку «Оформить заказ» и оплатите заказ.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <li class="submenuItem" id="installmentPlan"
+                            onclick="getSelectedField(this); getSelectedContent('max-installmentPlan', 'mini-installmentPlan')">
+                            Рассрочка
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-installmentPlan">
+                            <p>Наши клиенты могут покупать товары на <span>MainStream</span> в рассрочку.</p>
+
+                            <h4 class="h4-title">Какие товары можно купить в рассрочку?</h4>
+                            <p>На карточках таких товаров есть информация о покупке в рассрочку и указан размер
+                                платежа.</p>
+
+                            <h4 class="h4-title">Как купить в рассрочку?</h4>
+                            <ol>
+                                <li>Выберите товар, который можно купить в рассрочку, и положите его в корзину.</li>
+                                <li>Выберите способ оплаты «Рассрочка» при оформлении заказа. Если такого способа нет,
+                                    значит в
+                                    корзине
+                                    нет товаров, которые можно купить в рассрочку.
+                                </li>
+                                <li>Нажмите кнопку «Оформить предварительный заказ» — мы переведем вас в СберБанк
+                                    Онлайн. У вас
+                                    будет 4
+                                    часа, чтобы оформить рассрочку. Нужно успеть за это время, иначе заказ отменится.
+                                </li>
+                                <li>Заполните заявку. Одобрение обычно занимает 2–5 минут.</li>
+                            </ol>
+
+                            <h4 class="h4-title">Какой срок? Есть переплата?</h4>
+                            <p>Срок погашения до 10 месяцев. Сумма рассрочки — от 3 000 до 1 000 000 рублей.</p>
+                            <p>Переплата — 0 рублей.</p>
+
+                            <div class="unordered-list">
+                                <h4 class="h4-title"> Что нужно для покупки в рассрочку?</h4>
+                                <ul>
+                                    <li>Постоянная или временная регистрация на территории Армении.</li>
+                                    <li>Возраст от 21 до 70 лет.</li>
+                                </ul>
+                            </div>
+                            <p> Подробные условия — <a class="active-url" href="https://www.acba.am/" target="_blank">на
+                                странице про
+                                рассрочку.</a></p>
+                        </div>
+
+                        <li class="submenuItem" id="checks"
+                            onclick="getSelectedField(this); getSelectedContent('max-checks', 'mini-checks')">Чеки
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-checks">
+                            <h4 class="h4-title ">Оплата онлайн на сайте</h4>
+                            <p>Вы получите электронный чек на свою почту. Его также можно найти в личном кабинете. Для
+                                этого
+                                перейдите в
+                                раздел «Заказы», выберите нужный заказ.</p>
+                            <h4 class="h4-title ">Оплата при получении</h4>
+                            <p class="p-new-line">Вы получите кассовый чек от сотрудника службы доставки или
+                                магазина. </p>
+                            <p class="p-new-line">Товарный чек с составом заказа предоставляет продавец — этот чек вы
+                                найдете в
+                                коробке
+                                с заказом. </p>
+                            <p class="p-new-line">Если вы не получили кассовый чек от службы доставки или магазина (в
+                                печатном или
+                                электронном виде),
+                                обратитесь к ним и запросите чек.
+                            </p>
+                            <p class="p-new-line"><span>Важно:</span> вернуть или заменить товар можно с кассовым или
+                                товарным
+                                чеком.
+                            </p>
+                        </div>
+
+                        <li class="submenuItem" id="warrantyCard"
+                            onclick="getSelectedField(this); getSelectedContent('max-warrantyCard', 'mini-warrantyCard')">
+                            Гаранитийный талон
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-warrantyCard">
+                            <p class="p-new-line">Гарантийный талон предоставляет продавец и кладет его в коробку с
+                                заказом.</p>
+                            <p class="p-new-line"><span>Важно:</span>бывает, что продавец не предоставляет гарантийный
+                                талон. По
+                                закону
+                                «О защите прав потребителей» вам не могут отказать в гарантийном обслуживании даже при
+                                отсутствии
+                                гарантийного талона. Достаточно предоставить чек и серийный номер товара (указан на
+                                упаковке
+                                товара).
+                            </p>
+                            <p class="p-new-line">Вернуть или заменить товар можно без гарантийного талона.</p>
+                            <p class="p-new-line">Если вы хотите запросить гарантийный талон у продавца, отправьте
+                                обращение
+                                «Проблема с
+                                товаром» из личного кабинета. При создании обращения в выпадающем меню выберите причину
+                                «Нет чека
+                                или
+                                гарантийного талона».</p>
+                        </div>
+
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="sidebarElement">
+                    <div class="d-flex ">
+                        <h4 class="menuItem">Возврат</h4>
+                        <div class="arrow">
+                            <div class="d-block arrowRight">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 17.5L15 12L9.5 6.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-none arrowUP">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 14.5L12 9L6.5 14.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <ul onclick="stopProp(event)" class="submenu d-none" id="return">
+                        <li class="submenuItem" id="productProblem"
+                            onclick="getSelectedField(this); getSelectedContent('max-productProblem', 'mini-productProblem')">
+                            Проблема с товаром
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-productProblem">
+                            <p>Если вы получили товар надлежащего качества, но он не понравился или не подошел,
+                                отправьте обращение
+                                на
+                                возврат. </p>
+                            <p><span>Важно:</span> товар не должен иметь следов использования. Комплектация, товарный
+                                вид и упаковка
+                                должны быть сохранены. Обращение нужно отправить в течение 7 дней после получения
+                                товара.</p>
+                            <div>
+                                <h4 class="h4-title">Как отправить обращение</h4>
+                                <ol>
+                                    <li>Перейдите в раздел «Запросы» из личного кабинета.</li>
+                                    <li>Найдите нужный заказ и товар. Нажмите «Проблема с товаром». Кнопка находится в
+                                        карточке
+                                        товара.
+                                    </li>
+                                    <li>Выберите причину «Товар не подошёл» из выпадающего меню.</li>
+                                    <li>Напишите, почему вы хотите вернуть товар, и опишите его состояние. Приложите
+                                        фото — это
+                                        может
+                                        ускорить решение вашего обращения.
+                                    </li>
+                                    <li>Нажмите «Отправить обращение».</li>
+                                </ol>
+                                <p> В день можно отправить не более трех обращений.</p>
+                            </div>
+                            <h4 class="h4-title">Когда я получу ответ</h4>
+                            <p class="p-new-line">Мы ответим в течение 3 рабочих дней. Далее вам ответит продавец и
+                                расскажет как
+                                оформить возврат.</p>
+                            <p class="p-new-line"><span>Важно:</span> вы доставляете товар собственными силами и за свой
+                                счет.</p>
+                            <p class="p-new-line">Все ответы появятся в комментариях к обращению в личном кабинете. Вы
+                                также будете
+                                получать уведомления на
+                                свою электронную почту. Подробнее о том, как отслеживать статус обращений.
+                            </p>
+                        </div>
+
+                        <li class="submenuItem" id="returnOfGood"
+                            onclick="getSelectedField(this); getSelectedContent('max-returnOfGood', 'mini-returnOfGood')">
+                            Возврат товара надлежащего качества
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-returnOfGood">
+                            <p>Если вы получили товар надлежащего качества, но он не понравился или не подошел,
+                                отправьте обращение
+                                на
+                                возврат. </p>
+                            <p><span>Важно:</span> товар не должен иметь следов использования. Комплектация, товарный
+                                вид и упаковка
+                                должны быть сохранены. Обращение нужно отправить в течение 7 дней после получения
+                                товара.</p>
+                            <div>
+                                <h4 class="h4-title">Как отправить обращение</h4>
+                                <ol>
+                                    <li>Перейдите в раздел «Запросы» из личного кабинета.</li>
+                                    <li>Найдите нужный заказ и товар. Нажмите «Проблема с товаром». Кнопка находится в
+                                        карточке
+                                        товара.
+                                    </li>
+                                    <li>Выберите причину «Товар не подошёл» из выпадающего меню.</li>
+                                    <li>Напишите, почему вы хотите вернуть товар, и опишите его состояние. Приложите
+                                        фото — это
+                                        может
+                                        ускорить решение вашего обращения.
+                                    </li>
+                                    <li>Нажмите «Отправить обращение».</li>
+                                </ol>
+                                <p>В день можно отправить не более трех обращений.</p>
+                            </div>
+                            <h4 class="h4-title">Когда я получу ответ</h4>
+                            <p class="p-new-line">Мы ответим в течение 3 рабочих дней. Далее вам ответит продавец и
+                                расскажет как
+                                оформить возврат.</p>
+                            <p class="p-new-line"><span>Важно:</span> вы доставляете товар собственными силами и за свой
+                                счет.</p>
+                            <p class="p-new-line"> Все ответы появятся в комментариях к обращению в личном кабинете. Вы
+                                также будете
+                                получать уведомления на свою электронную почту. Подробнее о том, как отслеживать статус
+                                обращений.</p>
+                        </div>
+
+                        <li class="submenuItem" id="statusOfRequest"
+                            onclick="getSelectedField(this); getSelectedContent('max-statusOfRequest', 'mini-statusOfRequest')">
+                            Как отслеживать статус обращения
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-statusOfRequest">
+                            <p>Информация обо всех обращениях находится в разделе «Запросы» личного кабинета. Перейдите
+                                в раздел и
+                                найдите нужное обращение — в его карточке будет указан статус.
+                            </p>
+                            <p class="p-new-line">Статус «<span>В процессе</span>» значит, что Маркет и продавец
+                                занимаются решением
+                                вашего вопроса.</p>
+                            <p class="p-new-line">Статус «<span>Ожидает ответа покупателя</span>» значит, что для
+                                решения вопроса
+                                нужен
+                                ваш ответ. Ответьте в комментариях к обращению.</p>
+                            <p class="p-new-line">Все ответы появляются в комментариях к обращению. Чтобы перейти к
+                                комментариям,
+                                нажмите на карточку нужного обращения. Вы также будете получать уведомления на свою
+                                электронную
+                                почту.</p>
+                        </div>
+
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="sidebarElement">
+                    <div class="d-flex">
+                        <h4 class="menuItem">Отмена заказа</h4>
+                        <div class="arrow">
+                            <div class="d-block arrowRight">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 17.5L15 12L9.5 6.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-none arrowUP ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 14.5L12 9L6.5 14.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <ul onclick="stopProp(event)" class="submenu d-none" id="cancel">
+                        <li class="submenuItem" id="cancelOrder"
+                            onclick="getSelectedField(this); getSelectedContent('max-cancelOrder', 'mini-cancelOrder')">
+                            Как отменить заказ
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-cancelOrder">
+                            <p>Отменить заказ можно в личном кабинете. Для этого перейдите в раздел «Заказы», найдите
+                                нужный заказ и
+                                нажмите на кнопку «Отменить заказ».
+                            </p>
+                            <p><span>Важно:</span>отменить заказ можно только до того, как он перейдет в статус
+                                «Отправлен».
+                                Подробнее о
+                                статусах
+                                заказа.</p>
+                        </div>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="sidebarElement">
+                    <div class="d-flex">
+                        <h4 class="menuItem">Доставка</h4>
+                        <div class="arrow">
+                            <div class="d-block arrowRight">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 17.5L15 12L9.5 6.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-none arrowUP ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 14.5L12 9L6.5 14.5" stroke="#131313" stroke-width="0.75"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <ul onclick="stopProp(event)" class="submenu d-none" id="delivery">
+                        <li class="submenuItem" id="costAndDeliveryTime"
+                            onclick="getSelectedField(this); getSelectedContent('max-costAndDeliveryTime', 'mini-costAndDeliveryTime')">
+                            Стоимость и срок доставки
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-costAndDeliveryTime">
+                            <h4 class="p-new-line">Стоимость доставки</h4>
+                            <p class="p-new-line">Точную стоимость доставки вы увидите при оформлении заказа.</p>
+                            <div class="unordered-list">
+                                <p>Она зависит от:</p>
+                                <ul>
+                                    <li>категории товара,</li>
+                                    <li>веса и габаритов заказа,</li>
+                                    <li>суммы заказа,</li>
+                                    <li>способа доставки,</li>
+                                    <li>региона доставки.</li>
+                                </ul>
+                            </div>
+                            <h4 class="p-new-line">Срок доставки</h4>
+                            <p class="p-new-line">Срок доставки вы увидите при оформлении заказа. Он зависит от времени,
+                                которое
+                                нужно
+                                продавцу для подготовки заказа, способа доставки и адреса доставки.</p>
+                            <p class="p-new-line">Как отследить доставку заказа смотрите в статье «Отслеживание
+                                доставки».</p>
+                        </div>
+
+                        <li class="submenuItem" id="howOrderReceived"
+                            onclick="getSelectedField(this); getSelectedContent('max-howOrderReceived', 'mini-howOrderReceived')">
+                            Как проходит получение заказа
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-howOrderReceived">
+                            <div>
+                                <h4 class="h4-title">Другие службы доставки</h4>
+                                <ol>
+                                    <li>Вскройте транспортную упаковку при курьере. Товарную упаковку вскрывать
+                                        нельзя.
+                                    </li>
+                                    <li>Проверьте комплектность заказа.</li>
+                                    <li>Оплатите заказ (для оплаты при получении).</li>
+                                    <li>Заберите заказ.</li>
+                                </ol>
+                                <p>Если вы обнаружили проблему с товаром или содержанием заказа, смотрите подсказку в
+                                    конце этой
+                                    страницы.</p>
+                            </div>
+                            <h4 class="h4-title">Самовывоз из пункта выдачи</h4>
+                            <p>Посмотрите, есть ли ближайшие пункты выдачи.</p>
+                            <div class="unordered-list">
+                                <h4 class="h4-title">Другие службы доставки и пункты выдачи с частичным выкупом</h4>
+                                <p class="p-underline">В заказе не хватает части товаров</p>
+                                <ul>
+                                    <li>Оплата онлайн: заполните акт о недовложении у курьера или сотрудника пункта
+                                        выдачи. Далее
+                                        зайдите в личный кабинет и создайте обращение «Проблема с товаром».
+                                    </li>
+                                    <li>Оплата при получении: оплатите товары, которые вы получили. Далее зайдите в
+                                        личный кабинет и
+                                        создайте обращение «Проблема с товаром».
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="p-new-line">Продавец ответит вам и предложит варианты решения проблемы. Подробно о
+                                том, как
+                                создать обращение.</p>
+                            <div class="unordered-list">
+                                <p class="p-underline">Вы хотите отказаться от всех товаров</p>
+                                <ul>
+                                    <li>Оплата онлайн: передайте товары, от которых вы хотите отказаться, курьеру или
+                                        сотруднику
+                                        пункта
+                                        выдачи. Мы вернем деньги за эти товары в течение 1-7 рабочих дней на карту, с
+                                        которой вы
+                                        оплачивали заказ. Деньги за доставку не возвращаются.
+                                    </li>
+                                    <li>Оплата при получении: оплатите товары, которые берете.</li>
+                                </ul>
+                            </div>
+                            <div class="unordered-list">
+                                <p class="p-underline">Вы хотите отказаться от части товаров</p>
+                                <ul>
+                                    <li>Оплата онлайн: передайте товары, от которых вы хотите отказаться, курьеру или
+                                        сотруднику
+                                        пункта
+                                        выдачи. Мы вернем деньги за эти товары в течение 1-7 рабочих дней на карту, с
+                                        которой вы
+                                        оплачивали заказ. Деньги за доставку не возвращаются.
+                                    </li>
+                                    <li>Оплата при получении: оплатите товары, которые берете.</li>
+                                </ul>
+                            </div>
+                            <div class="unordered-list">
+                                <p class="p-underline">Вы хотите отказаться от всех товаров</p>
+                                <ul>
+                                    <li>Оплата онлайн: передайте товары курьеру или сотруднику пункта выдачи. Мы вернем
+                                        деньги за
+                                        товары
+                                        и доставку в течение 1-7 рабочих дней на карту, с которой вы оплачивали заказ.
+                                    </li>
+                                    <li>Оплата при получении: передайте товары курьеру или сотруднику пункта выдачи.
+                                        Доставку
+                                        оплачивать
+                                        не нужно.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="unordered-list">
+                                <p class="p-underline">Проблема с товаром</p>
+                                <p class="p-new-line">Например, у товара есть повреждения.</p>
+                                <ul>
+                                    <li>Оплата онлайн: передайте товар курьеру или сотруднику пункта выдачи. Мы вернем
+                                        деньги за
+                                        этот
+                                        товар в течение 1-7 рабочих дней на карту, с которой вы оплачивали заказ. Деньги
+                                        за доставку
+                                        возвращаются, если это был единственный товар в заказе.
+                                    </li>
+                                    <li>Оплата при получении: передайте товар курьеру или сотруднику пункта выдачи.
+                                        Доставку
+                                        оплачивать
+                                        не нужно.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <li class="submenuItem" id="deliveryProblem"
+                            onclick="getSelectedField(this); getSelectedContent('max-deliveryProblem', 'mini-deliveryProblem')">
+                            Проблема с доставкой
+                            <div class="arr"></div>
+                        </li>
+                        <div class="d-none subContent" id="mini-deliveryProblem">
+                            <p>Если у вас была проблема с доставкой (например, заказ доставили позже), отправьте
+                                обращение из
+                                личного
+                                кабинета. Это можно сделать после того, как заказ перешел в статус «Получен». Подробнее
+                                о статусах
+                                заказа — в отдельной статье.
+                            </p>
+                            <div>
+                                <h4 class="h4-title">Как отправить обращение</h4>
+                                <ol>
+                                    <li>Перейдите в раздел «Запросы» личного кабинета.</li>
+                                    <li>Найдите нужный заказ и нажмите «Была проблема с доставкой?». Кнопка находится
+                                        под номером
+                                        заказа.
+                                    </li>
+                                    <li>Выберите причину обращения из выпадающего меню.</li>
+                                    <li>Опишите проблему. Приложите фото или файлы — это может ускорить решение вашего
+                                        обращения.
+                                    </li>
+                                    <li>Нажмите «Отправить обращение».</li>
+                                </ol>
+                                <p>В день можно отправить не более трех обращений.</p>
+                            </div>
+                            <h4 class="h4-title">Когда я получу ответ</h4>
+                            <p class="p-new-line">Мы ответим в течение 3 рабочих дней. Ответ появится в комментариях к
+                                обращению в
+                                личном кабинете. Вы
+                                также будете получать уведомления на свою электронную почту. Подробнее о том, как
+                                отслеживать статус
+                                обращений.</p>
+                            <p class="p-new-line">Решение обращения обычно занимает около 7 рабочих дней.</p>
+                            <p class="p-new-line">Если у вас возникла проблема с товаром (например, у товара есть
+                                повреждения),
+                                ерейдите
+                                в статью
+                                «Проблема с товаром».</p>
+                        </div>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="details">
+
+            <div id="max-wayToReceiveOrder" class="d-none content wayToReceiveOrder">
+                <h5>КАКИЕ ЕСТЬ СПОСОБЫ ПОЛУЧЕНИЯ ЗАКАЗА</h5>
+                <h4>1. Доставка курьером</h4>
+                <p> Доступна по Армении. Срок доставки и точную стоимость вы увидите при оформлении заказа.
+                    Примерную стоимость можно узнать в корзине.
+                    Курьерская доставка может менятся в зависимости от:
+                </p>
+                <table>
+                    <tr>
+                        <th>Расстояния</th>
+                        <th>Габарита</th>
+                        <th>Количества</th>
+                    </tr>
+                    <tr>
+                        <td>Продавец указывает цену для разных локаций</td>
+                        <td>Для крупно габаритных и тяжелех товаров, продавец может менять цену</td>
+                        <td>Доставка может быть беплатной, если заказ будет выше указанной суммы (сумму задает
+                            продавец)
+                        </td>
+                    </tr>
+                </table>
+                <h4>2. Самовывоз из пункта выдачи</h4>
+                <p> Более 4000 пунктов выдачи в Ереване и 14 000 пунктов выдачи по Армении.
+                    Найти удобный для вас пункт выдачи можно в окне пунктов Самовывоза.
+                </p>
+
+            </div>
+
+
+            <div id="max-changedDeliveryDate" class="d-none content changedDeliveryDate">
+                <h5>В КОРЗИНЕ ИЗМЕНИЛАСЬ ДАТА ДОСТАВКИ</h5>
+                <div class="unordered-list">
+                    <h4>Такое происходит, когда:</h4>
+                    <ul>
+                        <li>у продавца смещается дата отгрузки товара,</li>
+                        <li>вы изменили регион или адрес доставки.</li>
+                    </ul>
+                </div>
+                <p>Если вам подходит новая дата доставки товара, оформите заказ.</p>
+            </div>
+
+
+            <div id="max-statusOfOrder" class="d-none content statusOfOrder">
+                <h5>КАК УЗНАТЬ СТАТУС ЗАКАЗА</h5>
+                <p>Узнать статус заказа можно в личном кабинете. Для этого перейдите в раздел «Заказы» и найдите нужный
+                    заказ. В карточке заказа вы увидите текущий статус.</p>
+                <div class="unordered-list">
+                    <p>Что означают статусы:</p>
+                    <ul>
+                        <li><span>Создан.</span> Вы создали заказ, и мы его приняли.</li>
+                        <li><span>Отправлен продавцу.</span> Заказ отправлен продавцу и ожидает подтверждения*.</li>
+                        <li><span>Подтвержден продавцом.</span> Продавец подтвердил заказ и готовит его к отгрузке в
+                            службу
+                            доставки.
+                        </li>
+                        <li><span>Получен курьерской службой.</span> Заказ поступил в службу доставки, его скоро
+                            отправят.
+                        </li>
+                        <li><span>Поступил в пункт выдачи.</span> Поступил в пункт выдачи. Заказ поступил в пункт
+                            выдачи, и
+                            вы можете его забрать.
+                        </li>
+                        <li><span>Передан курьеру.</span> Заказ у курьера, ожидайте доставку.</li>
+                        <li><span>Получен.</span> Вы получили или забрали заказ.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="max-paymentMethods" class="d-none content paymentMethods">
+                <h5>СПОСОБЫ ОПЛАТЫ</h5>
+                <h4>Оплата онлайн на сайте</h4>
+                <div class="unordered-list">
+                    <p>Можно оплатить:</p>
+                    <ul>
+                        <li>кредитной картой,</li>
+                        <li>налиными</li>
+                        <li>в рассрочку.</li>
+                    </ul>
+                </div>
+                <h4>Оплата при получении</h4>
+                <div class="unordered-list">
+                    <p>В пункте выдачи можно оплатить:</p>
+                    <ul>
+                        <li>кредитной картой,</li>
+                        <li>наличными</li>
+                    </ul>
+                    <p class="m-top-10">При доставке курьером можно оплатить:</p>
+                    <ul>
+                        <li>картой через терминал у курьера,</li>
+                        <li>наличными.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="max-payOrderOnline" class="d-none content payOrderOnline">
+                <h5>КАК ОПЛАТИТЬ ЗАКАЗ ОНЛАЙН</h5>
+                <h4>Банковской картой</h4>
+                <div class="unordered-list">
+                    <ul>
+                        <li>Выберите способ оплаты «Онлайн, банковской картой» при оформлении заказа.</li>
+                        <li>Введите данные карты или используйте карту, которую вы сохранили.</li>
+                        <li>Нажмите на кнопку «Оформить заказ» и оплатите заказ.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="max-installmentPlan" class="d-none content installmentPlan">
+                <h5>РАССРОЧКА</h5>
+                <p>Наши клиенты могут покупать товары на <span>MainStream</span> в рассрочку.</p>
+
+                <h4 class="h4-title">Какие товары можно купить в рассрочку?</h4>
+                <p>На карточках таких товаров есть информация о покупке в рассрочку и указан размер платежа.</p>
+
+                <h4 class="h4-title">Как купить в рассрочку?</h4>
+                <ol>
+                    <li>Выберите товар, который можно купить в рассрочку, и положите его в корзину.</li>
+                    <li>Выберите способ оплаты «Рассрочка» при оформлении заказа. Если такого способа нет, значит в
+                        корзине
+                        нет товаров, которые можно купить в рассрочку.
+                    </li>
+                    <li>Нажмите кнопку «Оформить предварительный заказ» — мы переведем вас в СберБанк Онлайн. У вас
+                        будет 4
+                        часа, чтобы оформить рассрочку. Нужно успеть за это время, иначе заказ отменится.
+                    </li>
+                    <li>Заполните заявку. Одобрение обычно занимает 2–5 минут.</li>
+                </ol>
+
+                <h4 class="h4-title">Какой срок? Есть переплата?</h4>
+                <p>Срок погашения до 10 месяцев. Сумма рассрочки — от 3 000 до 1 000 000 рублей.</p>
+                <p>Переплата — 0 рублей.</p>
+
+                <div class="unordered-list">
+                    <h4 class="h4-title"> Что нужно для покупки в рассрочку?</h4>
+                    <ul>
+                        <li>Постоянная или временная регистрация на территории Армении.</li>
+                        <li>Возраст от 21 до 70 лет.</li>
+                    </ul>
+                </div>
+                <p> Подробные условия — <a class="active-url" href="https://www.acba.am/" target="_blank">на странице
+                    про
+                    рассрочку.</a></p>
+            </div>
+
+
+            <div id="max-checks" class="d-none content checks">
+                <h5>ЧЕКИ</h5>
+                <h4 class="h4-title ">Оплата онлайн на сайте</h4>
+                <p>Вы получите электронный чек на свою почту. Его также можно найти в личном кабинете. Для этого
+                    перейдите в
+                    раздел «Заказы», выберите нужный заказ.</p>
+                <h4 class="h4-title ">Оплата при получении</h4>
+                <p class="p-new-line">Вы получите кассовый чек от сотрудника службы доставки или магазина. </p>
+                <p class="p-new-line">Товарный чек с составом заказа предоставляет продавец — этот чек вы найдете в
+                    коробке
+                    с заказом. </p>
+                <p class="p-new-line">Если вы не получили кассовый чек от службы доставки или магазина (в печатном или
+                    электронном виде),
+                    обратитесь к ним и запросите чек.
+                </p>
+                <p class="p-new-line"><span>Важно:</span> вернуть или заменить товар можно с кассовым или товарным
+                    чеком.
+                </p>
+            </div>
+
+
+            <div id="max-warrantyCard" class="d-none content warrantyCard">
+                <h5>ГАРАНИТИЙНЫЙ ТАЛОН</h5>
+                <p class="p-new-line">Гарантийный талон предоставляет продавец и кладет его в коробку с заказом.</p>
+                <p class="p-new-line"><span>Важно:</span>бывает, что продавец не предоставляет гарантийный талон. По
+                    закону
+                    «О защите прав потребителей» вам не могут отказать в гарантийном обслуживании даже при отсутствии
+                    гарантийного талона. Достаточно предоставить чек и серийный номер товара (указан на упаковке
+                    товара).
+                </p>
+                <p class="p-new-line">Вернуть или заменить товар можно без гарантийного талона.</p>
+                <p class="p-new-line">Если вы хотите запросить гарантийный талон у продавца, отправьте обращение
+                    «Проблема с
+                    товаром» из личного кабинета. При создании обращения в выпадающем меню выберите причину «Нет чека
+                    или
+                    гарантийного талона».</p>
+            </div>
+
+
+            <div id="max-productProblem" class="d-none content productProblem">
+                <h5>ПРОБЛЕМА С ТОВАРОМ</h5>
+                <p>Если вы получили товар надлежащего качества, но он не понравился или не подошел, отправьте обращение
+                    на
+                    возврат. </p>
+                <p><span>Важно:</span> товар не должен иметь следов использования. Комплектация, товарный вид и упаковка
+                    должны быть сохранены. Обращение нужно отправить в течение 7 дней после получения товара.</p>
+                <div>
+                    <h4 class="h4-title">Как отправить обращение</h4>
+                    <ol>
+                        <li>Перейдите в раздел «Запросы» из личного кабинета.</li>
+                        <li>Найдите нужный заказ и товар. Нажмите «Проблема с товаром». Кнопка находится в карточке
+                            товара.
+                        </li>
+                        <li>Выберите причину «Товар не подошёл» из выпадающего меню.</li>
+                        <li>Напишите, почему вы хотите вернуть товар, и опишите его состояние. Приложите фото — это
+                            может
+                            ускорить решение вашего обращения.
+                        </li>
+                        <li>Нажмите «Отправить обращение».</li>
+                    </ol>
+                    <p> В день можно отправить не более трех обращений.</p>
+                </div>
+                <h4 class="h4-title">Когда я получу ответ</h4>
+                <p class="p-new-line">Мы ответим в течение 3 рабочих дней. Далее вам ответит продавец и расскажет как
+                    оформить возврат.</p>
+                <p class="p-new-line"><span>Важно:</span> вы доставляете товар собственными силами и за свой счет.</p>
+                <p class="p-new-line">Все ответы появятся в комментариях к обращению в личном кабинете. Вы также будете
+                    получать уведомления на
+                    свою электронную почту. Подробнее о том, как отслеживать статус обращений.
+                </p>
+            </div>
+
+
+            <div id="max-returnOfGood" class="d-none content returnOfGood">
+                <h5>ВОЗВРАТ ТОВАРА НАДЛЕЖАЩЕГО КАЧЕСТВА</h5>
+                <p>Если вы получили товар надлежащего качества, но он не понравился или не подошел, отправьте обращение
+                    на
+                    возврат. </p>
+                <p><span>Важно:</span> товар не должен иметь следов использования. Комплектация, товарный вид и упаковка
+                    должны быть сохранены. Обращение нужно отправить в течение 7 дней после получения товара.</p>
+                <div>
+                    <h4 class="h4-title">Как отправить обращение</h4>
+                    <ol>
+                        <li>Перейдите в раздел «Запросы» из личного кабинета.</li>
+                        <li>Найдите нужный заказ и товар. Нажмите «Проблема с товаром». Кнопка находится в карточке
+                            товара.
+                        </li>
+                        <li>Выберите причину «Товар не подошёл» из выпадающего меню.</li>
+                        <li>Напишите, почему вы хотите вернуть товар, и опишите его состояние. Приложите фото — это
+                            может
+                            ускорить решение вашего обращения.
+                        </li>
+                        <li>Нажмите «Отправить обращение».</li>
+                    </ol>
+                    <p>В день можно отправить не более трех обращений.</p>
+                </div>
+                <h4 class="h4-title">Когда я получу ответ</h4>
+                <p class="p-new-line">Мы ответим в течение 3 рабочих дней. Далее вам ответит продавец и расскажет как
+                    оформить возврат.</p>
+                <p class="p-new-line"><span>Важно:</span> вы доставляете товар собственными силами и за свой счет.</p>
+                <p class="p-new-line"> Все ответы появятся в комментариях к обращению в личном кабинете. Вы также будете
+                    получать уведомления на свою электронную почту. Подробнее о том, как отслеживать статус
+                    обращений.</p>
+            </div>
+
+
+            <div id="max-statusOfRequest" class="d-none content statusOfRequest">
+                <h5>КАК ОТСЛЕЖИВАТЬ СТАТУС ОБРАЩЕНИЯ</h5>
+                <p>Информация обо всех обращениях находится в разделе «Запросы» личного кабинета. Перейдите в раздел и
+                    найдите нужное обращение — в его карточке будет указан статус.
+                </p>
+                <p class="p-new-line">Статус «<span>В процессе</span>» значит, что Маркет и продавец занимаются решением
+                    вашего вопроса.</p>
+                <p class="p-new-line">Статус «<span>Ожидает ответа покупателя</span>» значит, что для решения вопроса
+                    нужен
+                    ваш ответ. Ответьте в комментариях к обращению.</p>
+                <p class="p-new-line">Все ответы появляются в комментариях к обращению. Чтобы перейти к комментариям,
+                    нажмите на карточку нужного обращения. Вы также будете получать уведомления на свою электронную
+                    почту.</p>
+            </div>
+
+
+            <div id="max-cancelOrder" class="d-none content cancelOrder">
+                <h5>КАК ОТМЕНИТЬ ЗАКАЗ</h5>
+                <p>Отменить заказ можно в личном кабинете. Для этого перейдите в раздел «Заказы», найдите нужный заказ и
+                    нажмите на кнопку «Отменить заказ».
+                </p>
+                <p><span>Важно:</span>отменить заказ можно только до того, как он перейдет в статус «Отправлен».
+                    Подробнее о
+                    статусах
+                    заказа.</p>
+            </div>
+
+
+            <div id="max-costAndDeliveryTime" class="d-none content costAndDeliveryTime">
+                <h5>СТОИМОСТЬ И СРОК ДОСТАВКИ</h5>
+                <h4 class="p-new-line">Стоимость доставки</h4>
+                <p class="p-new-line">Точную стоимость доставки вы увидите при оформлении заказа.</p>
+                <div class="unordered-list">
+                    <p>Она зависит от:</p>
+                    <ul>
+                        <li>категории товара,</li>
+                        <li>веса и габаритов заказа,</li>
+                        <li>суммы заказа,</li>
+                        <li>способа доставки,</li>
+                        <li>региона доставки.</li>
+                    </ul>
+                </div>
+                <h4 class="p-new-line">Срок доставки</h4>
+                <p class="p-new-line">Срок доставки вы увидите при оформлении заказа. Он зависит от времени, которое
+                    нужно
+                    продавцу для подготовки заказа, способа доставки и адреса доставки.</p>
+                <p class="p-new-line">Как отследить доставку заказа смотрите в статье «Отслеживание доставки».</p>
+            </div>
+
+
+            <div id="max-howOrderReceived" class="d-none content howOrderReceived">
+                <h5>КАК ПРОХОДИТ ПОЛУЧЕНИЕ ЗАКАЗА</h5>
+                <div>
+                    <h4 class="h4-title">Другие службы доставки</h4>
+                    <ol>
+                        <li>Вскройте транспортную упаковку при курьере. Товарную упаковку вскрывать нельзя.</li>
+                        <li>Проверьте комплектность заказа.</li>
+                        <li>Оплатите заказ (для оплаты при получении).</li>
+                        <li>Заберите заказ.</li>
+                    </ol>
+                    <p>Если вы обнаружили проблему с товаром или содержанием заказа, смотрите подсказку в конце этой
+                        страницы.</p>
+                </div>
+                <h4 class="h4-title">Самовывоз из пункта выдачи</h4>
+                <p>Посмотрите, есть ли ближайшие пункты выдачи.</p>
+                <div class="unordered-list">
+                    <h4 class="h4-title">Другие службы доставки и пункты выдачи с частичным выкупом</h4>
+                    <p class="p-underline">В заказе не хватает части товаров</p>
+                    <ul>
+                        <li>Оплата онлайн: заполните акт о недовложении у курьера или сотрудника пункта выдачи. Далее
+                            зайдите в личный кабинет и создайте обращение «Проблема с товаром».
+                        </li>
+                        <li>Оплата при получении: оплатите товары, которые вы получили. Далее зайдите в личный кабинет и
+                            создайте обращение «Проблема с товаром».
+                        </li>
+                    </ul>
+                </div>
+                <p class="p-new-line">Продавец ответит вам и предложит варианты решения проблемы. Подробно о том, как
+                    создать обращение.</p>
+                <div class="unordered-list">
+                    <p class="p-underline">Вы хотите отказаться от всех товаров</p>
+                    <ul>
+                        <li>Оплата онлайн: передайте товары, от которых вы хотите отказаться, курьеру или сотруднику
+                            пункта
+                            выдачи. Мы вернем деньги за эти товары в течение 1-7 рабочих дней на карту, с которой вы
+                            оплачивали заказ. Деньги за доставку не возвращаются.
+                        </li>
+                        <li>Оплата при получении: оплатите товары, которые берете.</li>
+                    </ul>
+                </div>
+                <div class="unordered-list">
+                    <p class="p-underline">Вы хотите отказаться от части товаров</p>
+                    <ul>
+                        <li>Оплата онлайн: передайте товары, от которых вы хотите отказаться, курьеру или сотруднику
+                            пункта
+                            выдачи. Мы вернем деньги за эти товары в течение 1-7 рабочих дней на карту, с которой вы
+                            оплачивали заказ. Деньги за доставку не возвращаются.
+                        </li>
+                        <li>Оплата при получении: оплатите товары, которые берете.</li>
+                    </ul>
+                </div>
+                <div class="unordered-list">
+                    <p class="p-underline">Вы хотите отказаться от всех товаров</p>
+                    <ul>
+                        <li>Оплата онлайн: передайте товары курьеру или сотруднику пункта выдачи. Мы вернем деньги за
+                            товары
+                            и доставку в течение 1-7 рабочих дней на карту, с которой вы оплачивали заказ.
+                        </li>
+                        <li>Оплата при получении: передайте товары курьеру или сотруднику пункта выдачи. Доставку
+                            оплачивать
+                            не нужно.
+                        </li>
+                    </ul>
+                </div>
+                <div class="unordered-list">
+                    <p class="p-underline">Проблема с товаром</p>
+                    <p class="p-new-line">Например, у товара есть повреждения.</p>
+                    <ul>
+                        <li>Оплата онлайн: передайте товар курьеру или сотруднику пункта выдачи. Мы вернем деньги за
+                            этот
+                            товар в течение 1-7 рабочих дней на карту, с которой вы оплачивали заказ. Деньги за доставку
+                            возвращаются, если это был единственный товар в заказе.
+                        </li>
+                        <li>Оплата при получении: передайте товар курьеру или сотруднику пункта выдачи. Доставку
+                            оплачивать
+                            не нужно.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="max-deliveryProblem" class="d-none content deliveryProblem">
+                <h5>ПРОБЛЕМА С ДОСТАВКОЙ</h5>
+                <p>Если у вас была проблема с доставкой (например, заказ доставили позже), отправьте обращение из
+                    личного
+                    кабинета. Это можно сделать после того, как заказ перешел в статус «Получен». Подробнее о статусах
+                    заказа — в отдельной статье.
+                </p>
+                <div>
+                    <h4 class="h4-title">Как отправить обращение</h4>
+                    <ol>
+                        <li>Перейдите в раздел «Запросы» личного кабинета.</li>
+                        <li>Найдите нужный заказ и нажмите «Была проблема с доставкой?». Кнопка находится под номером
+                            заказа.
+                        </li>
+                        <li>Выберите причину обращения из выпадающего меню.</li>
+                        <li>Опишите проблему. Приложите фото или файлы — это может ускорить решение вашего обращения.
+                        </li>
+                        <li>Нажмите «Отправить обращение».</li>
+                    </ol>
+                    <p>В день можно отправить не более трех обращений.</p>
+                </div>
+                <h4 class="h4-title">Когда я получу ответ</h4>
+                <p class="p-new-line">Мы ответим в течение 3 рабочих дней. Ответ появится в комментариях к обращению в
+                    личном кабинете. Вы
+                    также будете получать уведомления на свою электронную почту. Подробнее о том, как отслеживать статус
+                    обращений.</p>
+                <p class="p-new-line">Решение обращения обычно занимает около 7 рабочих дней.</p>
+                <p class="p-new-line">Если у вас возникла проблема с товаром (например, у товара есть повреждения),
+                    ерейдите
+                    в статью
+                    «Проблема с товаром».</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="helpCenter.js"></script>
+
+</body>
+</html>
